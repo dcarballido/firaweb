@@ -1,0 +1,55 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+.logo{
+	margin-left: 550px;
+	width: 200px;
+	height: 50px;
+}
+
+li a {
+  display: block;
+  color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.benvingut{
+	float: left;
+}
+p{
+	font-size: 30px;
+}
+.benvingut p img{
+	width: 30px; 
+	height: 30px;
+}
+.modul{
+	float: right;
+}
+.button1{
+	width: 250px; 
+	height: 250px; 
+	background-color: #FFAE4F;
+}
+.button2{
+	width: 250px; 
+	height: 250px; 
+	background-color: #FFA43A;
+}
+.button3{
+	width: 250px; 
+	height: 250px; 
+	background-color: #FF9A24;
+}
+a{
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+}
