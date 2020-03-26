@@ -6,7 +6,7 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/login.css">
-  <meta charset="UTF-8"></head>
+</head>
 <body>
   <!------ Include the above in your HEAD tag ---------->
 
@@ -32,7 +32,7 @@
 
 
     if(isset($_REQUEST['error'])){
-      echo "<p style='text-align: center;color:red;'>* El Usuario o la Contraseña no son correctos</p>";
+      echo "<p style='text-align: center;color:red;'>* El Usuario o la Contraseña no son correcto</p>";
     }else{
       echo "";
     }
