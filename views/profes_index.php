@@ -18,8 +18,8 @@
 
 	  <li style="float:right">
 	  	
-	  	<?php if(isset($_SESSION['nombre'])){
-			echo "<a href='../services/logout.proc.php' >Cerrar sesión de ".$_SESSION['nombre']."</a>";
+	  	<?php if(isset($_SESSION['codi_usuari'])){
+			echo "<a href='../services/logout.proc.php' >Cerrar sesión de ".$_SESSION['nom']." ".$_SESSION['cognom1']." ".$_SESSION['cognom2']."</a>";
 		}else{
 			header("Location: ../login.php");
 		} 
@@ -33,7 +33,7 @@
     <div>
     <div>
     	<div class="benvingut">
-    		<p>Benvingut de nou <?php echo $_SESSION['nombre']; ?>  <img src="https://image.flaticon.com/icons/png/512/1144/1144811.png"></p>
+    		<?php echo "<p>Benvingut de nou ".$_SESSION['nom']." ".$_SESSION['cognom1']." ".$_SESSION['cognom2']." <img src='https://image.flaticon.com/icons/png/512/1144/1144811.png'></p>"; ?>
     	</div>
     	<div class="modul">
     		<?php
@@ -41,7 +41,7 @@
 	include '../services/conexion.php';
 
 	//Aquí se recogería el nombre de la sesión
-	$nom_usu=$_SESSION['nombre'];
+	$nom_usu=$_SESSION['nom'];
 
 	$horaActual = date('H:i:s');
 	//Coge el día actual en inglés
@@ -68,7 +68,6 @@
     <br><br><br>
     <div style="margin-top: 200px; text-align: center;">
     	<button class="button1"><a href="">EL MEU HORARI</a></button>
-    	<button class="button2"><a href="">GENERA CODI QR</a></button>
     	<button class="button3"><a href="profes_listas.php">LES MEVES LLISTES</a></button>
     </div>
 	</div>
