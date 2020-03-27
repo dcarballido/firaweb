@@ -43,6 +43,9 @@
 	//Hora de la base de datos +10 minutos
 	$hora2 = date('H:i:s' , $nuevafecha1 );
 
+	//Variable que recoge la fecha actual
+
+	$data=date('Y-m-d');
 
 	echo $hora1;
 
@@ -60,7 +63,7 @@
 			//A la hora 
 
 
-		$result1 = mysqli_query($conn, "INSERT INTO `tbl_assist_classe`(`hora_assist_classe`, `data_assist_classe`, `present`, `retras`, `id_usuari`, `id_classe`) VALUES ('".$hora."','".$dia."',1,0,".$id_usuari.",".$id_classe.")");
+		$result1 = mysqli_query($conn, "INSERT INTO `tbl_assist_classe`(`hora_assist_classe`, `data_assist_classe`, `present`, `retras`, `id_usuari`, `id_classe`) VALUES ('".$hora."','".$data."',1,0,".$id_usuari.",".$id_classe.")");
 		
 
 		echo "A LA HORA";
@@ -68,14 +71,14 @@
 		}else if ($hora>$hora1 && $hora<$hora2) {
 			//retard
 
-		$result1 = mysqli_query($conn, "INSERT INTO `tbl_assist_classe`(`hora_assist_classe`, `data_assist_classe`, `present`, `retras`, `id_usuari`, `id_classe`) VALUES ('".$hora."','".$dia."',1,1,".$id_usuari.",".$id_classe.")");
+		$result1 = mysqli_query($conn, "INSERT INTO `tbl_assist_classe`(`hora_assist_classe`, `data_assist_classe`, `present`, `retras`, `id_usuari`, `id_classe`) VALUES ('".$hora."','".$data."',1,1,".$id_usuari.",".$id_classe.")");
 		
 		echo "RETARD";
 
 	}else{
 		//Falta
 
-		$result1 = mysqli_query($conn, "INSERT INTO `tbl_assist_classe`(`hora_assist_classe`, `data_assist_classe`, `present`, `retras`, `id_usuari`, `id_classe`) VALUES ('".$hora."','".$dia."',0,0,".$id_usuari.",".$id_classe.")");
+		$result1 = mysqli_query($conn, "INSERT INTO `tbl_assist_classe`(`hora_assist_classe`, `data_assist_classe`, `present`, `retras`, `id_usuari`, `id_classe`) VALUES ('".$hora."','".$data."',0,0,".$id_usuari.",".$id_classe.")");
 
 		echo "FALTA";
 	}
