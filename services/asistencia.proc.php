@@ -11,6 +11,8 @@
 
 	$hora=date('H:i:s');
 
+	echo $hora;
+
 
 
 	//Array con los dias de la semana
@@ -27,7 +29,7 @@
 
 	//Consulta para recoger el id_classe dependiendo del dia actual
 
-	$result = mysqli_query($conn, "SELECT * FROM tbl_classe_uf INNER JOIN tbl_edicio_uf ON tbl_classe_uf.id_ed_uf=tbl_edicio_uf.id_ed_uf WHERE dia_classe='$dia'");
+	$result = mysqli_query($conn, "SELECT * FROM tbl_classe_uf INNER JOIN tbl_edicio_uf ON tbl_classe_uf.id_ed_uf=tbl_edicio_uf.id_ed_uf WHERE tbl_classe_uf.hora_ini_classe<'$hora' AND tbl_classe_uf.hora_fi_classe>'$hora' AND tbl_classe_uf.dia_classe = '$dia'");
 	$row = mysqli_fetch_array($result);
     $id_classe=$row['id_classe'];
 
