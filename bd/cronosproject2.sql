@@ -2,10 +2,10 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 27-03-2020 a las 16:30:50
--- Versión del servidor: 10.1.38-MariaDB
--- Versión de PHP: 7.3.2
+-- Host: 127.0.0.1
+-- Generation Time: Mar 28, 2020 at 10:55 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,15 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `cronosproject2`
+-- Database: `cronosproject2`
 --
-CREATE DATABASE IF NOT EXISTS `cronosproject2` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
-USE `cronosproject2`;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_assist_classe`
+-- Table structure for table `tbl_assist_classe`
 --
 
 CREATE TABLE `tbl_assist_classe` (
@@ -41,18 +39,19 @@ CREATE TABLE `tbl_assist_classe` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tbl_assist_classe`
+-- Dumping data for table `tbl_assist_classe`
 --
 
 INSERT INTO `tbl_assist_classe` (`id_assist_classe`, `hora_assist_classe`, `data_assist_classe`, `present`, `retras`, `id_usuari`, `id_classe`) VALUES
 (9, '11:32:38', 'Friday', 1, 0, 3, 5),
 (10, '11:33:04', 'Friday', 1, 1, 3, 5),
-(11, '11:33:35', 'Friday', 0, 0, 3, 5);
+(11, '11:33:35', 'Friday', 0, 0, 3, 5),
+(12, '17:02:31', '', 0, 0, 1, 5);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_aula`
+-- Table structure for table `tbl_aula`
 --
 
 CREATE TABLE `tbl_aula` (
@@ -62,7 +61,7 @@ CREATE TABLE `tbl_aula` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tbl_aula`
+-- Dumping data for table `tbl_aula`
 --
 
 INSERT INTO `tbl_aula` (`id_aula`, `nom_aula`, `capacitat`) VALUES
@@ -75,7 +74,7 @@ INSERT INTO `tbl_aula` (`id_aula`, `nom_aula`, `capacitat`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_cicle`
+-- Table structure for table `tbl_cicle`
 --
 
 CREATE TABLE `tbl_cicle` (
@@ -86,7 +85,7 @@ CREATE TABLE `tbl_cicle` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tbl_cicle`
+-- Dumping data for table `tbl_cicle`
 --
 
 INSERT INTO `tbl_cicle` (`id_cicle`, `codi_cicle`, `nom_cicle`, `aka_cicle`) VALUES
@@ -99,7 +98,7 @@ INSERT INTO `tbl_cicle` (`id_cicle`, `codi_cicle`, `nom_cicle`, `aka_cicle`) VAL
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_classe_uf`
+-- Table structure for table `tbl_classe_uf`
 --
 
 CREATE TABLE `tbl_classe_uf` (
@@ -111,20 +110,41 @@ CREATE TABLE `tbl_classe_uf` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tbl_classe_uf`
+-- Dumping data for table `tbl_classe_uf`
 --
 
 INSERT INTO `tbl_classe_uf` (`id_classe`, `dia_classe`, `hora_ini_classe`, `hora_fi_classe`, `id_ed_uf`) VALUES
-(1, 'Monday', '14:00:00', '17:00:00', 1),
-(2, 'Tuesday', '19:20:00', '22:00:00', 1),
-(3, 'Wednesday', '19:50:00', '23:00:00', 2),
-(4, 'Thursday', '18:00:00', '21:00:00', 3),
-(5, 'Friday', '11:23:00', '22:00:00', 1);
+(5, 'Friday', '11:23:00', '22:00:00', 1),
+(11, 'Monday', '09:00:00', '10:00:00', 6),
+(12, 'Monday', '08:00:00', '09:00:00', 5),
+(13, 'Monday', '12:00:00', '13:00:00', 4),
+(14, 'Tuesday', '08:00:00', '09:00:00', 5),
+(15, 'Wednesday', '08:00:00', '09:00:00', 6),
+(16, 'Thursday', '08:00:00', '09:00:00', 6),
+(17, 'Friday', '08:00:00', '09:00:00', 4),
+(28, 'Tuesday', '09:00:00', '10:00:00', 7),
+(29, 'Wednesday', '09:00:00', '10:00:00', 7),
+(30, 'Thursday', '09:00:00', '10:00:00', 6),
+(31, 'Friday', '09:00:00', '10:00:00', 6),
+(32, 'Tuesday', '12:00:00', '13:00:00', 6),
+(33, 'Monday', '10:00:00', '10:45:00', 4),
+(34, 'Tuesday', '10:00:00', '10:45:00', 5),
+(35, 'Wednesday', '10:00:00', '10:45:00', 6),
+(36, 'Thursday', '10:00:00', '10:45:00', 7),
+(37, 'Friday', '10:00:00', '10:45:00', 7),
+(38, 'Monday', '11:15:00', '12:00:00', 5),
+(39, 'Tuesday', '11:15:00', '12:00:00', 4),
+(40, 'Wednesday', '11:15:00', '12:00:00', 7),
+(41, 'Friday', '11:15:00', '12:00:00', 6),
+(42, 'Tuesday', '13:00:00', '14:00:00', 4),
+(43, 'Wednesday', '13:00:00', '14:00:00', 6),
+(44, 'Thursday', '13:00:00', '14:00:00', 6),
+(45, 'Friday', '13:00:00', '14:00:00', 7);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_departament`
+-- Table structure for table `tbl_departament`
 --
 
 CREATE TABLE `tbl_departament` (
@@ -133,7 +153,7 @@ CREATE TABLE `tbl_departament` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tbl_departament`
+-- Dumping data for table `tbl_departament`
 --
 
 INSERT INTO `tbl_departament` (`id_departament`, `nom_departament`) VALUES
@@ -145,7 +165,7 @@ INSERT INTO `tbl_departament` (`id_departament`, `nom_departament`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_edicio_uf`
+-- Table structure for table `tbl_edicio_uf`
 --
 
 CREATE TABLE `tbl_edicio_uf` (
@@ -153,24 +173,27 @@ CREATE TABLE `tbl_edicio_uf` (
   `data_ini_uf` date NOT NULL,
   `data_fi_uf` date NOT NULL,
   `hores_totals_uf` int(4) NOT NULL,
-  `id_usuari` int(11) NOT NULL,
   `id_aula` int(11) NOT NULL,
   `id_uf` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tbl_edicio_uf`
+-- Dumping data for table `tbl_edicio_uf`
 --
 
-INSERT INTO `tbl_edicio_uf` (`id_ed_uf`, `data_ini_uf`, `data_fi_uf`, `hores_totals_uf`, `id_usuari`, `id_aula`, `id_uf`) VALUES
-(1, '2020-03-22', '2020-04-16', 40, 2, 1, 4),
-(2, '2020-04-18', '2020-05-09', 50, 5, 1, 4),
-(3, '2020-03-22', '2020-03-26', 40, 5, 2, 6);
+INSERT INTO `tbl_edicio_uf` (`id_ed_uf`, `data_ini_uf`, `data_fi_uf`, `hores_totals_uf`, `id_aula`, `id_uf`) VALUES
+(1, '2020-03-22', '2020-04-16', 40, 1, 4),
+(2, '2020-04-18', '2020-05-09', 50, 1, 4),
+(3, '2020-03-22', '2020-03-26', 40, 2, 6),
+(4, '2020-03-23', '2020-04-20', 62, 5, 4),
+(5, '2020-04-21', '2020-04-29', 42, 5, 5),
+(6, '2020-03-23', '2020-04-25', 68, 4, 6),
+(7, '2020-03-18', '2020-05-30', 80, 3, 8);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_modul`
+-- Table structure for table `tbl_modul`
 --
 
 CREATE TABLE `tbl_modul` (
@@ -181,7 +204,7 @@ CREATE TABLE `tbl_modul` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tbl_modul`
+-- Dumping data for table `tbl_modul`
 --
 
 INSERT INTO `tbl_modul` (`id_modul`, `codi_modul`, `nom_modul`, `id_cicle`) VALUES
@@ -206,7 +229,7 @@ INSERT INTO `tbl_modul` (`id_modul`, `codi_modul`, `nom_modul`, `id_cicle`) VALU
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_professor_departament`
+-- Table structure for table `tbl_professor_departament`
 --
 
 CREATE TABLE `tbl_professor_departament` (
@@ -215,7 +238,7 @@ CREATE TABLE `tbl_professor_departament` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tbl_professor_departament`
+-- Dumping data for table `tbl_professor_departament`
 --
 
 INSERT INTO `tbl_professor_departament` (`id_usuari`, `id_departament`) VALUES
@@ -232,26 +255,29 @@ INSERT INTO `tbl_professor_departament` (`id_usuari`, `id_departament`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_professor_ed_uf`
+-- Table structure for table `tbl_professor_ed_uf`
 --
 
 CREATE TABLE `tbl_professor_ed_uf` (
+  `id_professor_ed_uf` int(11) NOT NULL,
   `id_usuari` int(11) NOT NULL,
   `id_ed_uf` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Volcado de datos para la tabla `tbl_professor_ed_uf`
+-- Dumping data for table `tbl_professor_ed_uf`
 --
 
-INSERT INTO `tbl_professor_ed_uf` (`id_usuari`, `id_ed_uf`) VALUES
-(2, 1),
-(5, 1);
+INSERT INTO `tbl_professor_ed_uf` (`id_professor_ed_uf`, `id_usuari`, `id_ed_uf`) VALUES
+(1, 6, 4),
+(2, 6, 5),
+(3, 6, 6),
+(4, 6, 7);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_tipus_usuari`
+-- Table structure for table `tbl_tipus_usuari`
 --
 
 CREATE TABLE `tbl_tipus_usuari` (
@@ -260,7 +286,7 @@ CREATE TABLE `tbl_tipus_usuari` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tbl_tipus_usuari`
+-- Dumping data for table `tbl_tipus_usuari`
 --
 
 INSERT INTO `tbl_tipus_usuari` (`id_tipus_usuari`, `tipus_usuari`) VALUES
@@ -270,7 +296,7 @@ INSERT INTO `tbl_tipus_usuari` (`id_tipus_usuari`, `tipus_usuari`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_uf`
+-- Table structure for table `tbl_uf`
 --
 
 CREATE TABLE `tbl_uf` (
@@ -281,7 +307,7 @@ CREATE TABLE `tbl_uf` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tbl_uf`
+-- Dumping data for table `tbl_uf`
 --
 
 INSERT INTO `tbl_uf` (`id_uf`, `codi_uf`, `nom_uf`, `id_modul`) VALUES
@@ -297,7 +323,7 @@ INSERT INTO `tbl_uf` (`id_uf`, `codi_uf`, `nom_uf`, `id_modul`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_usuari`
+-- Table structure for table `tbl_usuari`
 --
 
 CREATE TABLE `tbl_usuari` (
@@ -313,7 +339,7 @@ CREATE TABLE `tbl_usuari` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `tbl_usuari`
+-- Dumping data for table `tbl_usuari`
 --
 
 INSERT INTO `tbl_usuari` (`id_usuari`, `codi_usuari`, `password_usuari`, `nom_usuari`, `cognom1_usuari`, `cognom2_usuari`, `email_usuari`, `status_usuari`, `id_tipus_usuari`) VALUES
@@ -337,11 +363,11 @@ INSERT INTO `tbl_usuari` (`id_usuari`, `codi_usuari`, `password_usuari`, `nom_us
 (18, '100007207', '81dc9bdb52d04dc20036dbd8313ed055', 'Silvia', 'Toro', 'Vega', '100007207.joan23@fje.edu', 'actiu', 2);
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `tbl_assist_classe`
+-- Indexes for table `tbl_assist_classe`
 --
 ALTER TABLE `tbl_assist_classe`
   ADD PRIMARY KEY (`id_assist_classe`),
@@ -349,32 +375,32 @@ ALTER TABLE `tbl_assist_classe`
   ADD KEY `id_usuari` (`id_usuari`);
 
 --
--- Indices de la tabla `tbl_aula`
+-- Indexes for table `tbl_aula`
 --
 ALTER TABLE `tbl_aula`
   ADD PRIMARY KEY (`id_aula`);
 
 --
--- Indices de la tabla `tbl_cicle`
+-- Indexes for table `tbl_cicle`
 --
 ALTER TABLE `tbl_cicle`
   ADD PRIMARY KEY (`id_cicle`);
 
 --
--- Indices de la tabla `tbl_classe_uf`
+-- Indexes for table `tbl_classe_uf`
 --
 ALTER TABLE `tbl_classe_uf`
   ADD PRIMARY KEY (`id_classe`),
   ADD KEY `fk_id_ed_uf` (`id_ed_uf`);
 
 --
--- Indices de la tabla `tbl_departament`
+-- Indexes for table `tbl_departament`
 --
 ALTER TABLE `tbl_departament`
   ADD PRIMARY KEY (`id_departament`);
 
 --
--- Indices de la tabla `tbl_edicio_uf`
+-- Indexes for table `tbl_edicio_uf`
 --
 ALTER TABLE `tbl_edicio_uf`
   ADD PRIMARY KEY (`id_ed_uf`),
@@ -382,174 +408,175 @@ ALTER TABLE `tbl_edicio_uf`
   ADD KEY `fk_id_aula` (`id_aula`);
 
 --
--- Indices de la tabla `tbl_modul`
+-- Indexes for table `tbl_modul`
 --
 ALTER TABLE `tbl_modul`
   ADD PRIMARY KEY (`id_modul`),
   ADD KEY `fk_id_cicle` (`id_cicle`);
 
 --
--- Indices de la tabla `tbl_professor_departament`
+-- Indexes for table `tbl_professor_departament`
 --
 ALTER TABLE `tbl_professor_departament`
   ADD PRIMARY KEY (`id_usuari`),
   ADD KEY `id_departament` (`id_departament`);
 
 --
--- Indices de la tabla `tbl_professor_ed_uf`
+-- Indexes for table `tbl_professor_ed_uf`
 --
 ALTER TABLE `tbl_professor_ed_uf`
-  ADD PRIMARY KEY (`id_usuari`),
-  ADD KEY `id_ed_uf` (`id_ed_uf`);
+  ADD PRIMARY KEY (`id_professor_ed_uf`),
+  ADD KEY `fk_pp` (`id_usuari`),
+  ADD KEY `fk_pp2` (`id_ed_uf`);
 
 --
--- Indices de la tabla `tbl_tipus_usuari`
+-- Indexes for table `tbl_tipus_usuari`
 --
 ALTER TABLE `tbl_tipus_usuari`
   ADD PRIMARY KEY (`id_tipus_usuari`);
 
 --
--- Indices de la tabla `tbl_uf`
+-- Indexes for table `tbl_uf`
 --
 ALTER TABLE `tbl_uf`
   ADD PRIMARY KEY (`id_uf`),
   ADD KEY `fk_id_modul` (`id_modul`);
 
 --
--- Indices de la tabla `tbl_usuari`
+-- Indexes for table `tbl_usuari`
 --
 ALTER TABLE `tbl_usuari`
   ADD PRIMARY KEY (`id_usuari`),
   ADD KEY `fk_id_tipus_usuari` (`id_tipus_usuari`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `tbl_assist_classe`
+-- AUTO_INCREMENT for table `tbl_assist_classe`
 --
 ALTER TABLE `tbl_assist_classe`
-  MODIFY `id_assist_classe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_assist_classe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT de la tabla `tbl_aula`
+-- AUTO_INCREMENT for table `tbl_aula`
 --
 ALTER TABLE `tbl_aula`
   MODIFY `id_aula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de la tabla `tbl_cicle`
+-- AUTO_INCREMENT for table `tbl_cicle`
 --
 ALTER TABLE `tbl_cicle`
   MODIFY `id_cicle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de la tabla `tbl_classe_uf`
+-- AUTO_INCREMENT for table `tbl_classe_uf`
 --
 ALTER TABLE `tbl_classe_uf`
-  MODIFY `id_classe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_classe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
--- AUTO_INCREMENT de la tabla `tbl_departament`
+-- AUTO_INCREMENT for table `tbl_departament`
 --
 ALTER TABLE `tbl_departament`
   MODIFY `id_departament` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `tbl_edicio_uf`
+-- AUTO_INCREMENT for table `tbl_edicio_uf`
 --
 ALTER TABLE `tbl_edicio_uf`
-  MODIFY `id_ed_uf` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_ed_uf` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT de la tabla `tbl_modul`
+-- AUTO_INCREMENT for table `tbl_modul`
 --
 ALTER TABLE `tbl_modul`
   MODIFY `id_modul` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT de la tabla `tbl_professor_departament`
+-- AUTO_INCREMENT for table `tbl_professor_departament`
 --
 ALTER TABLE `tbl_professor_departament`
   MODIFY `id_usuari` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT de la tabla `tbl_professor_ed_uf`
+-- AUTO_INCREMENT for table `tbl_professor_ed_uf`
 --
 ALTER TABLE `tbl_professor_ed_uf`
-  MODIFY `id_usuari` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_professor_ed_uf` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `tbl_tipus_usuari`
+-- AUTO_INCREMENT for table `tbl_tipus_usuari`
 --
 ALTER TABLE `tbl_tipus_usuari`
   MODIFY `id_tipus_usuari` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `tbl_uf`
+-- AUTO_INCREMENT for table `tbl_uf`
 --
 ALTER TABLE `tbl_uf`
   MODIFY `id_uf` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT de la tabla `tbl_usuari`
+-- AUTO_INCREMENT for table `tbl_usuari`
 --
 ALTER TABLE `tbl_usuari`
   MODIFY `id_usuari` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `tbl_assist_classe`
+-- Constraints for table `tbl_assist_classe`
 --
 ALTER TABLE `tbl_assist_classe`
   ADD CONSTRAINT `fk_id_classe` FOREIGN KEY (`id_classe`) REFERENCES `tbl_classe_uf` (`id_classe`),
   ADD CONSTRAINT `tbl_assist_classe_ibfk_1` FOREIGN KEY (`id_usuari`) REFERENCES `tbl_usuari` (`id_usuari`);
 
 --
--- Filtros para la tabla `tbl_classe_uf`
+-- Constraints for table `tbl_classe_uf`
 --
 ALTER TABLE `tbl_classe_uf`
   ADD CONSTRAINT `fk_id_ed_uf` FOREIGN KEY (`id_ed_uf`) REFERENCES `tbl_edicio_uf` (`id_ed_uf`);
 
 --
--- Filtros para la tabla `tbl_edicio_uf`
+-- Constraints for table `tbl_edicio_uf`
 --
 ALTER TABLE `tbl_edicio_uf`
   ADD CONSTRAINT `fk_id_aula` FOREIGN KEY (`id_aula`) REFERENCES `tbl_aula` (`id_aula`),
   ADD CONSTRAINT `fk_id_uf` FOREIGN KEY (`id_uf`) REFERENCES `tbl_uf` (`id_uf`);
 
 --
--- Filtros para la tabla `tbl_modul`
+-- Constraints for table `tbl_modul`
 --
 ALTER TABLE `tbl_modul`
   ADD CONSTRAINT `fk_id_cicle` FOREIGN KEY (`id_cicle`) REFERENCES `tbl_cicle` (`id_cicle`);
 
 --
--- Filtros para la tabla `tbl_professor_departament`
+-- Constraints for table `tbl_professor_departament`
 --
 ALTER TABLE `tbl_professor_departament`
   ADD CONSTRAINT `fk_id_usuari` FOREIGN KEY (`id_usuari`) REFERENCES `tbl_usuari` (`id_usuari`),
   ADD CONSTRAINT `tbl_professor_departament_ibfk_1` FOREIGN KEY (`id_departament`) REFERENCES `tbl_departament` (`id_departament`);
 
 --
--- Filtros para la tabla `tbl_professor_ed_uf`
+-- Constraints for table `tbl_professor_ed_uf`
 --
 ALTER TABLE `tbl_professor_ed_uf`
-  ADD CONSTRAINT `tbl_professor_ed_uf_ibfk_1` FOREIGN KEY (`id_usuari`) REFERENCES `tbl_usuari` (`id_usuari`),
-  ADD CONSTRAINT `tbl_professor_ed_uf_ibfk_2` FOREIGN KEY (`id_ed_uf`) REFERENCES `tbl_edicio_uf` (`id_ed_uf`);
+  ADD CONSTRAINT `fk_pp` FOREIGN KEY (`id_usuari`) REFERENCES `tbl_usuari` (`id_usuari`),
+  ADD CONSTRAINT `fk_pp2` FOREIGN KEY (`id_ed_uf`) REFERENCES `tbl_edicio_uf` (`id_ed_uf`);
 
 --
--- Filtros para la tabla `tbl_uf`
+-- Constraints for table `tbl_uf`
 --
 ALTER TABLE `tbl_uf`
   ADD CONSTRAINT `fk_id_modul` FOREIGN KEY (`id_modul`) REFERENCES `tbl_modul` (`id_modul`);
 
 --
--- Filtros para la tabla `tbl_usuari`
+-- Constraints for table `tbl_usuari`
 --
 ALTER TABLE `tbl_usuari`
   ADD CONSTRAINT `fk_id_tipus_usuari` FOREIGN KEY (`id_tipus_usuari`) REFERENCES `tbl_tipus_usuari` (`id_tipus_usuari`);
