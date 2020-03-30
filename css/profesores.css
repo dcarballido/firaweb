@@ -1,20 +1,35 @@
+body{
+	background-color: #071334;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: white;
+  background-color: #f4f5fa;
+ border-bottom: #009eff 4px solid;
+    padding: 18px 6px 18px 24px;
+    padding: 1.125rem .375rem 1.125rem 1.5rem;
+     border-bottom: #009eff 4px solid;
+    padding: 18px 6px 18px 24px;
+    padding: 1.125rem .375rem 1.125rem 1.5rem;
 }
 
 .logo{
-	margin-left: 550px;
+	margin-left: 33%;
 	width: 200px;
 	height: 50px;
 }
 
+.logonet {
+	width: 120px;
+	height: 60px;
+}
+
 li a {
   display: block;
-  color: blue;
+  color: red;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -25,6 +40,7 @@ li a {
 }
 p{
 	font-size: 30px;
+	color: white;
 }
 .benvingut p img{
 	width: 30px; 
@@ -37,19 +53,18 @@ p{
 	width: 250px; 
 	height: 250px; 
 	background-color: #FFAE4F;
+
 }
 .button2{
 	width: 250px; 
 	height: 250px; 
 	background-color: #FFA43A;
+	
 }
-.button3{
-	width: 250px; 
-	height: 250px; 
-	background-color: #FF9A24;
-}
-a{
+
+.botones p{
 	text-decoration: none;
 	font-size: 20px;
 	color: white;
 }
+

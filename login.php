@@ -10,8 +10,14 @@
 <body>
   <!------ Include the above in your HEAD tag ---------->
 
+
   <div class="wrapper fadeInDown">
+    
     <div id="formContent">
+      <br>
+      <img class="logo" src="https://m.joan23.fje.edu/sites/all/themes/escuelas_fje_mobile/images/logo_bellvitge_fje.png">
+    <br>
+    <br>
       <!-- Tabs Titles -->
 
       <!-- Icon -->

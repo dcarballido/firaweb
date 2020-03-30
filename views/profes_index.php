@@ -3,7 +3,7 @@
 <head>
 	<title>Página Profes</title>
 	<link rel="stylesheet" type="text/css" href="../css/profesores.css">
-	<meta charset="UTF-8">
+	<meta charset="utf-8" >
 </head>
 <body>
 	<?php
@@ -14,6 +14,7 @@
 		?>
 
 		<ul>
+		<img class="logonet" src="../img/logonet.jpg">
 	  <img class="logo" src="https://m.joan23.fje.edu/sites/all/themes/escuelas_fje_mobile/images/logo_bellvitge_fje.png">
 
 	  <li style="float:right">
@@ -28,12 +29,12 @@
 		</li>
 
     </ul>
-    <hr>
+  
   
     <div>
     <div>
     	<div class="benvingut">
-    		<?php echo "<p>Benvingut de nou ".$_SESSION['nom']." ".$_SESSION['cognom1']." ".$_SESSION['cognom2']." <img src='https://image.flaticon.com/icons/png/512/1144/1144811.png'></p>"; ?>
+    		<p>Benvingut de nou <?php echo $_SESSION['nom']." ".$_SESSION['cognom1']." ".$_SESSION['cognom2']; ?>  <img src="https://image.flaticon.com/icons/png/512/1144/1144811.png"></p>
     	</div>
     	<div class="modul">
     		<?php
@@ -56,7 +57,7 @@
 	$resultUsu = mysqli_query($conn,$queryUsu);
 	$rowUsu = mysqli_fetch_array($resultUsu);
 	if($rowUsu['nom_modul']=="" || $rowUsu['nom_aula']==""){
-		echo "<br><br><p>".$nom_usu.", ahora no tienes ningúna clase.</p><br>";
+		echo "<br><br><p>".$nom_usu.", ahora no tienes ninguna clase.</p><br>";
 	}else{
 		echo "<br><br><p>Son les ".$horaActual.", ".$nom_usu." has d'estar a </p><p>".$rowUsu['nom_modul'].", aula ".$rowUsu['nom_aula'].".</p><br>";
 	}
@@ -65,11 +66,12 @@
 	?>
     	</div>
     </div>
-    <br><br><br>
-    <div style="margin-top: 200px; text-align: center;">
-    	<button class="button1"><a href="">EL MEU HORARI</a></button>
-    	<button class="button3"><a href="profes_listas.php">LES MEVES LLISTES</a></button>
+    <br>
+    <div class="botones" style="margin-top: 200px; text-align: center;">
+    	<a href="profes_horario.php"><button class="button1"><p>EL MEU HORARI</p></button></a>
+    	<a href="profes_listas.php"><button class="button2"><p>LES MEVES LLISTES</p></button></a>
     </div>
+
 	</div>
 
 </body>

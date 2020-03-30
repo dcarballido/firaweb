@@ -1,4 +1,3 @@
-
 /* BASIC */
 
 html {
@@ -8,6 +7,8 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
+  background-image: url(https://educacionjesuitas.org/wp-content/uploads/2018/09/Logo-50e%CC%80-aniversari-final-1200x480.jpg);
+  background-size: 121%;
 }
 
 a {
@@ -53,7 +54,6 @@ h2 {
   -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   text-align: center;
-  height: 200px;
 }
 
 
@@ -269,4 +269,12 @@ input[type=password]:placeholder {
 
 #icon {
   width:60%;
+}
+
+/logo/
+
+.logo{
+  margin-left: 60px;
+  width: 300px;
+  height: 70px;
 }

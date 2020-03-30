@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Página Profes</title>
+	<title>Página Alumnos</title>
 	<link rel="stylesheet" type="text/css" href="../css/profesores.css">
 </head>
 <body>
+	
 	<?php
 		//Mantengo la sesión. Por ende puedo utilizar la variable $_SESSION anteriormente configurada
 
@@ -16,6 +17,7 @@
 		?>
 
 		<ul>
+		<img class="logonet" src="../img/logonet.jpg">
 	  <img class="logo" src="https://m.joan23.fje.edu/sites/all/themes/escuelas_fje_mobile/images/logo_bellvitge_fje.png">
 
 	  <li style="float:right">
@@ -37,8 +39,8 @@
 		</li>
 
     </ul>
-    <hr>
-  
+  	
+
     <div>
     <div>
     	<div class="benvingut">
@@ -46,18 +48,19 @@
     		</p>
     	</div>
     </div>
-    <br><br><br>
-    <div style="margin-top: 200px; text-align: center;">
+    <br>
+
+    <div class="botones" style="margin-top: 200px; text-align: center;">
+    	<a href="alumnos_horario.php"><button class="button1"><p>EL MEU HORARI</p></button></a>
     	
-    	<button class="button2">
 
     		 <?php
     		 
-    		 echo '<a href="../services/asistencia.proc.php?id_usuari='.$id_usuari.'"> Asistencia</a>'
+    		 echo '<a href="../services/asistencia.proc.php?id_usuari='.$id_usuari.'"><button class="button2"> <p>ASISTENCIA</p></button></a>'
 
     		 ?>
     			
-    		</button>
+    		
     	
     </div>
 	</div>
