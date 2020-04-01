@@ -9,7 +9,9 @@
 <body>
 <table>
 
- <div id="resultado"></div>
+<button onclick="consultar(); return false" style="width: 50px;height: 15px;">boton</button>
+
+	<div id="resultado"></div>
 
 
 </body>
